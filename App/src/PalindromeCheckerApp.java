@@ -2,6 +2,17 @@ import java.util.Scanner;
 
 public class PalindromeCheckerApp {
 
+    // Node class for singly linked list
+    static class Node {
+        char data;
+        Node next;
+
+        Node(char data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
