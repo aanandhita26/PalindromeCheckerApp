@@ -32,6 +32,8 @@ UC9- Recursive Palindrome Checker
 
 UC10-Case-Insensitive & Space-Ignored Palindrome
 
+UC11- Object-Oriented Palindrome Service
+
 Each use case was created in a separate branch and merged into the main branch after testing.
 
 

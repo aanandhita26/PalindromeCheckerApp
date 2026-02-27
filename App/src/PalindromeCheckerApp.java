@@ -6,31 +6,42 @@ public class PalindromeCheckerApp {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("UC10 - Case Insensitive & Space Ignored Palindrome Check");
+        System.out.println("UC11 - Object Oriented Palindrome Service");
 
         System.out.print("Enter a string: ");
         String input = sc.nextLine();
 
-        // Step 1: Normalize string
-        String normalized = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        // Create service object
+        PalindromeService service = new PalindromeService();
 
-        boolean isPalindrome = true;
+        boolean result = service.checkPalindrome(input);
 
-        // Step 2: Compare characters from both ends
-        for (int i = 0; i < normalized.length() / 2; i++) {
-            if (normalized.charAt(i) !=
-                    normalized.charAt(normalized.length() - 1 - i)) {
-                isPalindrome = false;
-                break;
-            }
-        }
-
-        if (isPalindrome) {
+        if (result) {
             System.out.println("Result: It is a Palindrome.");
         } else {
             System.out.println("Result: It is NOT a Palindrome.");
         }
 
         sc.close();
+    }
+}
+
+// Separate service class
+class PalindromeService {
+
+    public boolean checkPalindrome(String input) {
+
+        int start = 0;
+        int end = input.length() - 1;
+
+        while (start < end) {
+            if (input.charAt(start) != input.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+
+        return true;
     }
 }
