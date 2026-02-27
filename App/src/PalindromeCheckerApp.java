@@ -12,14 +12,22 @@ public class PalindromeCheckerApp {
         System.out.print("Input : ");
         String input = sc.nextLine();
 
-        // Injecting strategy at runtime
+        // Choose strategy (you can switch for comparison)
         PalindromeStrategy strategy = new StackStrategy();
-
         // PalindromeStrategy strategy = new DequeStrategy();
+
+        // Start time measurement
+        long startTime = System.nanoTime();
 
         boolean result = strategy.check(input);
 
-        System.out.println("Is Palindrome? " + result);
+        // End time measurement
+        long endTime = System.nanoTime();
+
+        long executionTime = endTime - startTime;
+
+        System.out.println("Is Palindrome? : " + result);
+        System.out.println("Execution Time : " + executionTime + " ns");
 
         sc.close();
     }

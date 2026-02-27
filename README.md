@@ -25,17 +25,24 @@ UC6 – Queue and Stack Based Method
 Uses both Queue (FIFO) and Stack (LIFO) to compare characters by enqueueing and pushing them, then matching dequeue and pop operations.
 
 UC7- Deque Based Optimized Palindrome Checker
+Uses Deque to compare characters from both ends
 
 UC8-Linked List Based Palindrome Checker
+Converts string into a linked list and compares by reversing half
 
 UC9- Recursive Palindrome Checker
+Uses recursion to compare first and last characters
 
 UC10-Case-Insensitive & Space-Ignored Palindrome
+Normalizes string before checking palindrome
 
 UC11- Object-Oriented Palindrome Service
+Separates palindrome logic into a service class
 
 UC12- Strategy Pattern for Palindrome Algorithms
+Implements different palindrome algorithms using Strategy design pattern
 
+UC13- Performance Comparison
 Each use case was created in a separate branch and merged into the main branch after testing.
 
 
