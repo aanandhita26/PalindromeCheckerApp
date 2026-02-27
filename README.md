@@ -27,6 +27,7 @@ Uses both Queue (FIFO) and Stack (LIFO) to compare characters by enqueueing and 
 UC7- Deque Based Optimized Palindrome Checker
 Each use case was created in a separate branch and merged into the main branch after testing.
 
+UC8-Linked List Based Palindrome Checker
 Tools used:
 Java  
 IntelliJ  
