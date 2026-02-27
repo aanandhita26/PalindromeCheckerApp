@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.Deque;
-import java.util.ArrayDeque;
 
 public class PalindromeCheckerApp {
 
@@ -8,34 +6,36 @@ public class PalindromeCheckerApp {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("UC7 - Deque Based Palindrome Check");
+        System.out.println("UC9 - Recursive Palindrome Check");
 
         System.out.print("Enter a string: ");
         String input = sc.nextLine();
 
-        Deque<Character> deque = new ArrayDeque<>();
+        boolean result = check(input, 0, input.length() - 1);
 
-        // Insert characters into deque
-        for (char c : input.toCharArray()) {
-            deque.addLast(c);
-        }
-
-        boolean isPalindrome = true;
-
-        // Compare front and rear
-        while (deque.size() > 1) {
-            if (deque.removeFirst() != deque.removeLast()) {
-                isPalindrome = false;
-                break;
-            }
-        }
-
-        if (isPalindrome) {
+        if (result) {
             System.out.println("Result: It is a Palindrome.");
         } else {
             System.out.println("Result: It is NOT a Palindrome.");
         }
 
         sc.close();
+    }
+
+    // Recursive method
+    private static boolean check(String s, int start, int end) {
+
+        // Base condition
+        if (start >= end) {
+            return true;
+        }
+
+        // If mismatch found
+        if (s.charAt(start) != s.charAt(end)) {
+            return false;
+        }
+
+        // Recursive call
+        return check(s, start + 1, end - 1);
     }
 }
