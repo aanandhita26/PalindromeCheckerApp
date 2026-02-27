@@ -30,6 +30,8 @@ UC8-Linked List Based Palindrome Checker
 
 UC9- Recursive Palindrome Checker
 
+UC10-Case-Insensitive & Space-Ignored Palindrome
+
 Each use case was created in a separate branch and merged into the main branch after testing.
 
 
